@@ -42,4 +42,8 @@ A report was created with the following pages:
 <p>
   <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/customer-detail.png" alt="Customer Detail"/>
 </p>
+#### Dashboard with Slicer Panel open
+<p>
+  <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/slicer-panel.png" alt="Dashboard with Slicer Panel open"/>
+</p>
   
