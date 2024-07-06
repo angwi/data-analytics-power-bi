@@ -12,7 +12,7 @@ A folder containing raw csv files, which contain information about transactions,
 The following tasks were performend in the initial data preparation
 - Data loading and inspection
 - Creating new categorical columns like Order quantity type (Single Item, Multiple Items), customer priority (Standard or Priority) etc
-- Creating a Date table (Calendar table)
+- Adding more useful columns to the Calendar table
 
 ### Data Modeling
 A relational data model was created. Below is the data model created:
