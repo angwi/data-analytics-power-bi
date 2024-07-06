@@ -22,8 +22,158 @@ A relational data model was created. Below is the data model created:
 </p>
 
 ### DAX Measures
-Several DAX measures were created
+Several DAX measures were created, some of which a listed below:
+```java
+% of All Orders = DIVIDE([Total Orders], [All Orders])
+```
+```java
+% of All Returns = DIVIDE([Total Returns], [All Returns])
+```
+```java
+10-day Rolling Revenue = 
+CALCULATE(
+    [Total Revenue],
+    DATESINPERIOD(
+        'Calendar'[Date],
+        MAX(
+            'Calendar'[Date]
+        ),
+        -10,
+        DAY
+    )
+)
+```
+```java
+90-day Rolling Profit = 
+CALCULATE(
+    [Total Profit],
+    DATESINPERIOD(
+        'Calendar'[Date],
+        MAX(
+            'Calendar'[Date]
+        ),
+        -90,
+        DAY
+    )
+)
+```
+```java
+All Orders = 
+CALCULATE(
+    [Total Orders],
+    ALL('Sales Data')
+)
+```
+```java
+All Returns =
+CALCULATE(
+[Total Returns],
+ALL('Returns Data')
+)
+```
+```java
+Average Retail Price = AVERAGE('Product'[ProductPrice])
+```
+```java
+Average Revenue Per Customer = 
+DIVIDE(
+    [Total Revenue], [Total Customers]
+)
+```
+```java
+Bike Return Rate = 
+CALCULATE(
+    [Return Rate], 'Product Categories'[CategoryName] = "Bikes")
+```
+```java
+Bike Returns = 
+CALCULATE([Total Returns], 'Product Categories'[CategoryName] = "Bikes")
+```
+```java
+Bike Sales = CALCULATE(
+    [Quantity Sold], 'Product Categories'[CategoryName] = "Bikes")
+```
+```java
+Bulk Orders = 
+CALCULATE([Total Orders],'Sales Data'[OrderQuantity] > 1)
+```
 
+```java
+High Ticket Orders = CALCULATE([Total Orders], 
+FILTER('Product', 'Product'[ProductPrice] > [Overall Average Price]))
+```
+```java
+Order Target = [Previous Month Orders]*1.1
+```
+```java
+Order Target Gap = [Total Orders] - [Order Target]
+```
+```java
+Overall Average Price = CALCULATE([Average Retail Price], ALL('Product'))
+```
+```java
+Previous Month Orders = 
+CALCULATE(
+    [Total Orders],
+    DATEADD(
+        'Calendar'[Date],
+        -1,
+        MONTH
+    )
+)
+```
+```java
+Previous Month Profit = 
+CALCULATE(
+    [Total Profit],
+    DATEADD(
+        'Calendar'[Date],
+        -1,
+        MONTH
+    )
+)
+```
+```java
+Previous Month Returns = 
+CALCULATE(
+    [Total Returns],
+    DATEADD(
+        'Calendar'[Date],
+        -1,
+        MONTH
+    )
+)
+```
+```java
+Previous Month Revenue = 
+CALCULATE(
+    [Total Revenue],
+    DATEADD(
+        'Calendar'[Date],
+        -1,
+        MONTH
+    )
+)
+```
+```java
+Profit Target = 
+[Previous Month Profit]*1.1
+```
+```java
+Profit Target Gap = [Total Profit] - [Profit Target]
+```
+```java
+Quantity Returned = SUM('Returns Data'[ReturnQuantity])
+```
+```java
+YTD Revenue = 
+ CALCULATE(
+    [Total Revenue],
+    DATESYTD(
+        'Calendar'[Date]
+    )
+ )
+```
 ### Report
 A report was created with the following pages:
 
