@@ -15,7 +15,11 @@ The following tasks were performend in the initial data preparation
 - Creating a Date table (Calendar table)
 
 ### Data Modeling
-A relational data model was created
+A relational data model was created. Below is the data model created:
+
+<p>
+  <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/data-model.png" />
+</p>
 
 ### DAX Measures
 Several DAX measures were created
@@ -23,7 +27,19 @@ Several DAX measures were created
 ### Report
 A report was created with the following pages:
 - Executive Dashboard
+  <p>
+    <img src ="https://github.com/angwi/data-analytics-power-bi/blob/main/exec-dashboard.png" alt="Executive Dashboard"/>
+  </p>
 - Map
+<p>
+  <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/map.png" alt="Map"/>
+</p>
 - Product Detail
+<p>
+  <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/product-detail.png" alt="Product Detail"/>
+</p>
 - Customer Detail
+<p>
+  <img src="https://github.com/angwi/data-analytics-power-bi/blob/main/customer-detail.png" alt="Customer Detail"/>
+</p>
   
