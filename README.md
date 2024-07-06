@@ -1,4 +1,4 @@
-# E-Commerce Sales Analytics
+# E-Commerce Sales Analysis
 
 ### Project Overview
 AdventureWorks is a global manufacturer of cycling equipment and accessories.
