@@ -166,6 +166,27 @@ Profit Target Gap = [Total Profit] - [Profit Target]
 Quantity Returned = SUM('Returns Data'[ReturnQuantity])
 ```
 ```java
+Weekend Orders = 
+CALCULATE([Total Orders], 'Calendar'[Weekend] = "Weekend")
+```
+```java
+Total Profit = [Total Revenue] - [Total Cost]
+```
+```java
+Total Orders = DISTINCTCOUNT('Sales Data'[OrderNumber])
+```
+```java
+Total Revenue = SUMX(
+    'Sales Data', 'Sales Data'[OrderQuantity]*
+    RELATED(
+        'Product'[ProductPrice]
+        )
+    )
+```
+```java
+Total Returns = COUNT('Returns Data'[ReturnQuantity])
+```
+```java
 YTD Revenue = 
  CALCULATE(
     [Total Revenue],
